@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
+import config from '../config';
 
 const GoogleMap = ({ google, apiKey }) => {
   const [map, setMap] = useState(null);
@@ -11,7 +12,7 @@ const GoogleMap = ({ google, apiKey }) => {
     // Initialize map when google prop is available
     if (google) {
       const mapInstance = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: 37.774929, lng: -122.419416 },
+        center: { lat: 12.9289709, lng: 77.5045989 },
         zoom: 14
       });
       setMap(mapInstance);

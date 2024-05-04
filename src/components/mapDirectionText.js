@@ -12,7 +12,7 @@ const TextDirectionsComponent = () => {
     const apiKey = config.googleMapsApiKey; // Access API key from config
     const travelMode = 'driving';
     try {
-      const response = await fetch(`${config.host}/api/directions?origin=${encodedOrigin}&destination=${encodedDestination}&mode=${travelMode}&apiKey=${apiKey}`);
+      const response = await fetch(`${config.host}/api/${config.textDirection}?origin=${encodedOrigin}&destination=${encodedDestination}&mode=${travelMode}&apiKey=${apiKey}`);
       const data = await response.json();
       setDirections(data);
     } catch (error) {
