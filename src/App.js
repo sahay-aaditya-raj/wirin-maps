@@ -1,24 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import TextDirectionsComponent from "./components/mapDirectionText";
+import VisualMap from './components/visualMap';
 
+import { Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+          <Route path="/textMap" element={<TextDirectionsComponent />} />
+          <Route path='/visualMap' element={<VisualMap />} />
+    </Routes>
   );
 }
 
